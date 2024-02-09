@@ -1,15 +1,15 @@
-function Tile(props) {
+function Tile({imgSrc, imgAlt, title, children}) {
     return (
-        <>
-        <section>
-            <img src="" alt=""/>
-        </section>
-    <section>
-        <h2>Titel</h2>
-        <p>Tekst</p>
-    </section>
-    </>
-    );
+        imgSrc ?
+            <section>
+                <img src={imgSrc} alt={imgAlt}/>
+            </section>
+            :
+            <section>
+                <h2>{title}</h2>
+                {children}
+            </section>
+    )
 }
 
 export default Tile;

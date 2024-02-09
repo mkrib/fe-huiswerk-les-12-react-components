@@ -1,9 +1,9 @@
 import './Button.css';
 
-function Button({name, isDisabled}) {
+function Button({buttonType, isDisabled, name}) {
     return (
         <button
-            type="button"
+            type={buttonType}
             className="button"
             disabled={isDisabled}
         >
